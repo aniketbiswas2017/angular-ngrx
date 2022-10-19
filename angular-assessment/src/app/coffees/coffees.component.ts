@@ -17,8 +17,8 @@ export class CoffeesComponent implements OnInit {
 
   ngOnInit(): void {
     this.coffeeSrv.getCoffees().subscribe(
-       response => {
-        this.coffeeList = response;
+       data => {
+        this.coffeeList = data;
         console.log(this.coffeeList)
        });
   }

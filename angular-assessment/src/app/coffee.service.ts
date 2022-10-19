@@ -17,11 +17,11 @@ export class CoffeeService {
     return this.http.get<ICoffee[]>(this.coffeeListURL)
       .pipe(
         tap(data => console.log(JSON.stringify(data))),
-        catchError(this.handleError)
+        catchError(this.errorHandler)
       );
   }
 
-  private handleError(err: HttpErrorResponse) {
+  private errorHandler(err: HttpErrorResponse) {
     // in a real world app, we may send the server to some remote logging infrastructure
     // instead of just logging it to the console
     let errorMessage = '';
