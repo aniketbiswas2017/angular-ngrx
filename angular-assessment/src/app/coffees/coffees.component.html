@@ -1,0 +1,10 @@
+<h3>{{title}}</h3>
+
+<div *ngFor="let d of coffeeList | paginate: { itemsPerPage: 10, currentPage: p }" >
+  <p>"ID" = {{ d.id }}</p>
+  <p>"Blend Name" = {{ d.blend_name }}</p>
+  <p>"Variety" = {{ d.variety }}</p>
+  <p>"Notes" = {{ d.notes }}</p>
+  <hr>
+</div>
+<pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>
