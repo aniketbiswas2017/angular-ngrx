@@ -6,7 +6,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoffeesComponent } from './coffees/coffees.component';
-import {NgbCollapseModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import {NgbCollapseModule} from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     HttpClientModule,
     NgxPaginationModule,
-    NgbCollapseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
