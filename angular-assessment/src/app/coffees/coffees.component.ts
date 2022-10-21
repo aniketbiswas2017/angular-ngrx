@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ICoffee } from '../coffee';
 import { CoffeeService } from '../coffee.service';
+import { Store, select } from '@ngrx/store';
+import * as fromCoffee from '../coffee.selectors'
+import { loadCoffees } from '../coffee.actions';
 
 @Component({
   selector: 'app-coffees',
@@ -13,13 +16,22 @@ export class CoffeesComponent implements OnInit {
   title = "Coffee List";
   p: number = 1;
 
-  constructor(private coffeeSrv: CoffeeService) { }
+  constructor(private coffeeSrv: CoffeeService, private store: Store) { }
 
   ngOnInit(): void {
-    this.coffeeSrv.getCoffees().subscribe(
-       data => {
+
+    this.store.dispatch(loadCoffees());
+    this.store.pipe(select(fromCoffee.getCoffees)).subscribe(
+      data => {
         this.coffeeList = data;
         console.log(this.coffeeList)
-       });
+      }
+    )
+
+    this.store.pipe(select(fromCoffee.getError)).subscribe(
+      err => {
+        this.errorMessage = err;
+      }
+    )
   }
 }
