@@ -1,0 +1,46 @@
+::ng-deep .mat-toolbar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+::ng-deep .mat-drawer {
+  position: sticky;
+  position: -webkit-sticky;
+}
+
+::ng-deep .mat-card:hover {
+  box-shadow: -1px 10px 29px 0px rgba(0, 0, 0, 0.755);
+  transform: translate3D(0, -2px, 0) scale(1.05);
+  transition: all 0.2s ease;
+}
+
+::ng-deep .mat-card {
+    border-radius: 5px !important;
+  }
+
+::ng-deep .mat-card-title,
+.mat-card-subtitle,
+.mat-card-content {
+  font-size: 12px;
+}
+
+::ng-deep .mat-card-content {
+  margin: 0 16px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.app-container {
+    height: 100%;
+    overflow: hidden;
+}
+
+.logo {
+    font-family: "MV Boli", sans-serif;
+    padding: 2px 10px 0px 10px;
+    font-size: xx-large;
+}

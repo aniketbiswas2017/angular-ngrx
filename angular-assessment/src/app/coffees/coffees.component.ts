@@ -13,8 +13,9 @@ import { loadCoffees } from '../coffee.actions';
 export class CoffeesComponent implements OnInit {
   errorMessage = '';
   coffeeList: ICoffee[] = [];
-  title = "Coffee List";
+  title = "We love you a";
   p: number = 1;
+  rippleColor: string = "white";
 
   constructor(private coffeeSrv: CoffeeService, private store: Store) { }
 

@@ -1,2 +1,46 @@
+<div fxLayout="column" fxLayoutAlign="space-between center" class="app-container">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <button
+        mat-icon-button
+        (click)="sidenav.toggle()"
+        fxShow="true"
+        fxHide.gt-sm
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      
+      <span class="logo">Déja-brèw</span>
+      <img src="https://img.icons8.com/doodle/56/000000/cafe--v1.png"/>
+      <span class="menu-spacer"></span>
+      <div
+        fxShow="true"
+        fxHide.lt-md
+        style="margin-left: auto; margin-right: 0"
+      >
+        <a href="#" mat-button>Home</a>
+        <a href="#" mat-button>Details</a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
 
-<app-coffees></app-coffees>
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+        <a href="#" mat-list-item>Home</a>
+        <a href="#" mat-list-item>Details</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <div class="content">
+        <app-coffees></app-coffees>
+        
+        <app-quotes></app-quotes>
+        <div fxLayoutGap="50px"></div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+  <app-footer></app-footer>
+</div>
+

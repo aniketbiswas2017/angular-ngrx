@@ -12,20 +12,33 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { CoffeeEffects } from './coffee.effects';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+import { FooterComponent } from './footer/footer.component';
+import { QuotesComponent } from './quotes/quotes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CoffeesComponent
+    CoffeesComponent,
+    FooterComponent,
+    QuotesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FlexLayoutModule,
+    MaterialModule,
     NgxPaginationModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     EffectsModule.forRoot([CoffeeEffects]),
+    BrowserAnimationsModule,
+  ],
+  exports: [
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,60 @@
+
+h1 {
+  font-weight: 300;
+  font-size: xxx-large;
+  padding-bottom: 15px;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: xx-large;
+  padding-bottom: 15px;
+}
+
+::ng-deep .ngx-pagination .current,
+.btn-info {
+  background: #17a2b8 !important;
+  border: transparent !important;
+  border-radius: 35px !important;
+}
+
+::ng-deep .ngx-pagination .a:hover {
+  background: #17a2b8 !important;
+  border-radius: 35px !important; 
+  border: transparent !important;
+}
+
+::ng-deep .ngx-pagination a, .ngx-pagination button {
+  color: white !important;
+
+}
+::ng-deep .ngx-pagination a:hover, .ngx-pagination button:hover {
+  color: white !important;
+  border-radius: 35px !important; 
+  background: #000000 !important;
+}
+
+::ng-deep .ngx-pagination .disabled {
+    padding: 0.1875rem 0.625rem;
+    color: rgba(255, 255, 255, 0.461) !important;
+    cursor: default;
+}
+
+.box {
+    animation: nudge .7s linear;
+}
+
+@keyframes nudge {
+  
+  0% {
+    transform: rotate(-7deg);
+  }
+  
+  33% {
+    transform: rotate(7deg);
+  }
+  
+  66% {
+    transform: rotate(-7deg);
+  }
+}
