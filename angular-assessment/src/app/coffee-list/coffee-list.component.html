@@ -7,19 +7,19 @@
   <div fxHide.gt-xs fxShow.lt-sm><h2 >{{title}} Latte</h2></div>
   
 <div fxLayout="row wrap" fxLayoutGap="20px grid">
-  <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.md="33%" *ngFor="let d of coffeeList | paginate: { itemsPerPage: 10, currentPage: p }">
+  <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.md="33%" *ngFor="let coffee of coffeeList | paginate: { itemsPerPage: 10, currentPage: p }">
     <mat-card class="mat-elevation-z4" >
       <mat-card-header>
-        <mat-card-title>{{ d.blend_name }}</mat-card-title>
-        <mat-card-subtitle>{{ d.variety }}</mat-card-subtitle>
+        <mat-card-title>{{ coffee.blend_name }}</mat-card-title>
+        <mat-card-subtitle>{{ coffee.variety }}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
         <p>
-          {{  (d.notes.length>6)? (d.notes | slice:0:40)+'..':(d.notes) }}
+          {{  (coffee.notes.length>6)? (coffee.notes | slice:0:40)+'..':(coffee.notes) }}
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <button matRipple mat-button>SEE MORE</button>
+        <button (click) = "onSelectCoffee(coffee)" matRipple mat-button>SEE MORE</button>
       </mat-card-actions>
     </mat-card>
   </div>

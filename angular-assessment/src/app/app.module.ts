@@ -3,9 +3,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxPaginationModule } from 'ngx-pagination';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoffeesComponent } from './coffees/coffees.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -17,13 +16,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { FooterComponent } from './footer/footer.component';
 import { QuotesComponent } from './quotes/quotes.component';
+import { PageErrorComponent } from './page-error/page-error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CoffeesComponent,
     FooterComponent,
-    QuotesComponent
+    QuotesComponent,
+    routingComponents,
+    PageErrorComponent
   ],
   imports: [
     BrowserModule,
