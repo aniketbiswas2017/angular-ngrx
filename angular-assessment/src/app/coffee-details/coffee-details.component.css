@@ -1,12 +1,12 @@
 .details-card {
-    max-width: 550px;
-    transform: none;
-    box-shadow: 0px 0px 20px 3px rgba(37, 36, 36, 0.83);
-    transition: none;
+  max-width: 550px;
+  transform: none;
+  box-shadow: 0px 0px 20px 3px rgba(37, 36, 36, 0.83);
+  transition: none;
 }
 .coffee-details {
-    line-height: 200%;
-    color: rgba(255,255,255,.7);
-    word-spacing: 1px;
-    font-size: medium;
+  line-height: 200%;
+  color: rgba(255, 255, 255, 0.7);
+  word-spacing: 1px;
+  font-size: medium;
 }

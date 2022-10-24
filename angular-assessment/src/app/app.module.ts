@@ -24,7 +24,7 @@ import { PageErrorComponent } from './page-error/page-error.component';
     FooterComponent,
     QuotesComponent,
     routingComponents,
-    PageErrorComponent
+    PageErrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,10 +38,8 @@ import { PageErrorComponent } from './page-error/page-error.component';
     EffectsModule.forRoot([CoffeeEffects]),
     BrowserAnimationsModule,
   ],
-  exports: [
-    MaterialModule,
-  ],
+  exports: [MaterialModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

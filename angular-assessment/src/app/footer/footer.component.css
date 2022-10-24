@@ -1,22 +1,22 @@
-.footer{
-    flex-shrink: 0;
-    flex-grow: 0;
-    position: fixed;
-    bottom: 0;
-    background-color: #212121;
-  }
-  p {
-    color: rgba(255, 228, 196, 0.656);
-    font-family: "Lucida Console", "Courier New", monospace;
-    margin-bottom: 5px !important;
-    font-size: small;
-  }
+.footer {
+  flex-shrink: 0;
+  flex-grow: 0;
+  position: fixed;
+  bottom: 0;
+  background-color: #212121;
+}
+p {
+  color: rgba(255, 228, 196, 0.656);
+  font-family: "Lucida Console", "Courier New", monospace;
+  margin-bottom: 5px !important;
+  font-size: small;
+}
 
-  .logo-footer {
-    font-family: "Lucida Console", "Courier New", monospace;
-    padding: 2px 10px 0px 10px;
-    font-size:small;
-    color: rgba(255, 228, 196, 0.656);
-    margin-right: -5px !important;
-    margin-bottom: 5px !important;
+.logo-footer {
+  font-family: "Lucida Console", "Courier New", monospace;
+  padding: 2px 10px 0px 10px;
+  font-size: small;
+  color: rgba(255, 228, 196, 0.656);
+  margin-right: -5px !important;
+  margin-bottom: 5px !important;
 }

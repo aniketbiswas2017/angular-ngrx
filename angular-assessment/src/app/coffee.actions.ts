@@ -1,9 +1,7 @@
 import { createAction, props } from '@ngrx/store';
 import { ICoffee } from './coffee';
 
-export const loadCoffees = createAction(
-  '[Coffee] Load Coffees'
-);
+export const loadCoffees = createAction('[Coffee] Load Coffees');
 
 export const loadCoffeesSuccess = createAction(
   '[Coffee] Load Coffees Success',

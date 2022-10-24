@@ -1,55 +1,59 @@
-<div *ngIf="coffeeSelected" fxLayout="column" fxLayoutAlign="space-around center" >
-    <h1>Your Coffee</h1>  
+<div *ngIf="coffeeSelected" fxLayout="column" fxLayoutAlign="space-around center">
+    <h1>Your Coffee</h1>
     <mat-card class="details-card">
         <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{ blendName}}</mat-card-title>
-          <mat-card-subtitle>{{origin}}</mat-card-subtitle>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{ blendName}}</mat-card-title>
+            <mat-card-subtitle>{{origin}}</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image src="https://coffee.alexflipnote.dev/random" alt="Random coffee picture">
         <mat-card-content>
             <div class="coffee-details">
                 <p> <b>ID: </b> {{ coffeeID }}
                 </p>
-              <p> <b>Roast: </b> {{ intensifier | titlecase }}
-              </p>
-              <p> <b>Variety:</b> {{variety | titlecase }} 
-            </p>
-              <p> <b>Tasting Notes:</b> {{notes | titlecase }}
-            </p>
-            <mat-card-subtitle>“<b>Tasting Notes</b>” are a term the coffee industry uses to describe the natural flavours that are detectable in the taste of the coffee. These are naturally occurring flavours; nothing is added to the coffee, these are not added flavours.</mat-card-subtitle>
+                <p> <b>Roast: </b> {{ intensifier | titlecase }}
+                </p>
+                <p> <b>Variety:</b> {{variety | titlecase }}
+                </p>
+                <p> <b>Tasting Notes:</b> {{notes | titlecase }}
+                </p>
+                <mat-card-subtitle>“<b>Tasting Notes</b>” are a term the coffee industry uses to describe the natural
+                    flavours that are detectable in the taste of the coffee. These are naturally occurring flavours;
+                    nothing is added to the coffee, these are not added flavours.</mat-card-subtitle>
 
             </div>
         </mat-card-content>
-      </mat-card>
+    </mat-card>
 </div>
 
-<div *ngIf="!coffeeSelected" fxLayout="column" fxLayoutAlign="space-between center" >
-    <h1>Our Coffee</h1>  
+<div *ngIf="!coffeeSelected" fxLayout="column" fxLayoutAlign="space-between center">
+    <h1>Our Coffee</h1>
     <div *ngFor="let coffee of coffeeList | paginate: { itemsPerPage: 10, currentPage: p }" style="padding: 10px;">
-        <mat-card >
+        <mat-card>
             <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>{{ coffee.blend_name }}</mat-card-title>
-              <mat-card-subtitle>{{coffee.origin}}</mat-card-subtitle>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{ coffee.blend_name }}</mat-card-title>
+                <mat-card-subtitle>{{coffee.origin}}</mat-card-subtitle>
             </mat-card-header>
             <mat-card-content>
                 <div class="coffee-details">
                     <p> <b>ID: </b> {{ coffee.id }}
                     </p>
-                  <p> <b>Roast: </b> {{ coffee.intensifier | titlecase }}
-                  </p>
-                  <p> <b>Variety:</b> {{coffee.variety | titlecase }} 
-                </p>
-                  <p> <b>Tasting Notes:</b> {{coffee.notes | titlecase }}
-                </p>
-                <mat-card-subtitle>“<b>Tasting Notes</b>” are a term the coffee industry uses to describe the natural flavours that are detectable in the taste of the coffee. These are naturally occurring flavours; nothing is added to the coffee, these are not added flavours.</mat-card-subtitle>
-    
+                    <p> <b>Roast: </b> {{ coffee.intensifier | titlecase }}
+                    </p>
+                    <p> <b>Variety:</b> {{coffee.variety | titlecase }}
+                    </p>
+                    <p> <b>Tasting Notes:</b> {{coffee.notes | titlecase }}
+                    </p>
+                    <mat-card-subtitle>“<b>Tasting Notes</b>” are a term the coffee industry uses to describe the
+                        natural flavours that are detectable in the taste of the coffee. These are naturally occurring
+                        flavours; nothing is added to the coffee, these are not added flavours.</mat-card-subtitle>
+
                 </div>
             </mat-card-content>
-          </mat-card>
+        </mat-card>
     </div>
-    <pagination-controls (pageChange)="p = $event" class="float-right" style="padding-top: 30px;"></pagination-controls>
+    <pagination-controls *ngIf="!errorMessage" (pageChange)="p = $event" class="float-right" style="padding-top: 30px;">
+    </pagination-controls>
+    <app-page-error *ngIf="errorMessage"></app-page-error>
 </div>
-
-

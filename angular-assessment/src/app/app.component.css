@@ -10,6 +10,10 @@
   position: -webkit-sticky;
 }
 
+::ng-deep .mat-card-actions {
+  margin-left: 0px !important;
+}
+
 ::ng-deep .mat-card:hover {
   box-shadow: -1px 10px 29px 0px rgba(0, 0, 0, 0.755);
   transform: translate3D(0, -2px, 0) scale(1.05);
@@ -18,44 +22,48 @@
 }
 
 ::ng-deep .mat-card {
-    border-radius: 5px !important;
-  }
+  border-radius: 5px !important;
+}
 
 ::ng-deep .mat-card-title,
-.mat-card-subtitle,
-.mat-card-content {
+.mat-card-subtitle {
   font-size: 12px;
 }
 
 ::ng-deep .mat-card-content {
   margin: 0 16px;
+  font-size: 12px;
 }
 
-::ng-deep .mat-button.mat-accent, .mat-icon-button.mat-accent, .mat-stroked-button.mat-accent {
-    color: #1ac8e3 !important;
+::ng-deep .mat-button.mat-accent,
+.mat-icon-button.mat-accent,
+.mat-stroked-button.mat-accent {
+  color: #1ac8e3 !important;
 }
 
 ::ng-deep .ngx-pagination .current,
-.btn-info, .ngx-pagination .a:hover {
+.btn-info,
+.ngx-pagination .a:hover {
   background: #17a2b8 !important;
   border: transparent !important;
   border-radius: 35px !important;
 }
 
-::ng-deep .ngx-pagination a, .ngx-pagination button {
+::ng-deep .ngx-pagination a,
+.ngx-pagination button {
   color: white !important;
-
 }
-::ng-deep .ngx-pagination a:hover, .ngx-pagination button:hover {
+::ng-deep .ngx-pagination a:hover,
+.ngx-pagination button:hover {
   color: white !important;
-  border-radius: 35px !important; 
+  border-radius: 35px !important;
   background: #000000 !important;
 }
 
 ::ng-deep .ngx-pagination .disabled {
-    padding: 0.1875rem 0.625rem;
-    color: rgba(255, 255, 255, 0.461) !important;
-    cursor: default;
+  padding: 0.1875rem 0.625rem;
+  color: rgba(255, 255, 255, 0.461) !important;
+  cursor: default;
 }
 
 .content {
@@ -63,12 +71,12 @@
 }
 
 .app-container {
-    height: 100%;
-    overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 
 .logo {
-    font-family: "MV Boli", sans-serif;
-    padding: 2px 10px 0px 10px;
-    font-size: xx-large;
+  font-family: "MV Boli", sans-serif;
+  padding: 2px 10px 0px 10px;
+  font-size: xx-large;
 }
