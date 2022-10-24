@@ -15,7 +15,7 @@ This project leverages the latest version of Angular, comprises of a Product Lis
 
 - My name is in the footer along with my linkedIn account and gmail link, to prove that I have also completely read these directions.
 
-- I have also made use of route parameters to see each products details along with a Page not found component for 404 error.
+- I have also made use of route parameters to see each products details along with a Page Not Found component for 404 error or any unknown errors.
 
 - I have made use of [Angular Material](https://material.angular.io/), which is a popular Angular User Interface (UI) component library and [Angulart Flex Layout](https://github.com/angular/flex-layout) which is a a stand-alone library developed by the Angular team for designing responsive layouts.
 
