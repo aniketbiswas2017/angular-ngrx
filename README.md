@@ -7,7 +7,7 @@ Angular assessment leveraging the latest version of Angular + NgRx
 
 This project leverages the latest version of Angular, comprises of a Product List and Product Details Page comprising of different types of coffee beans from around the world.
 
-- It retrieves a list of 50 coffees items from [this link.](https://random-data-api.com/api/coffee/random_coffee endpoint)
+- It retrieves a list of 50 coffees items from [this link.](https://random-data-api.com/api/coffee/random_coffee)
 
 - You can find API documentation [here.](https://random-data-api.com) 
 
