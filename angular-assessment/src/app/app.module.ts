@@ -17,6 +17,9 @@ import { MaterialModule } from './material/material.module';
 import { FooterComponent } from './footer/footer.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { PageErrorComponent } from './page-error/page-error.component';
+import { CoffeeListComponent } from './coffee-list/coffee-list.component';
+import { CoffeeDetailsComponent } from './coffee-details/coffee-details.component';
+import { CoffeeService } from './coffee.service';
 
 @NgModule({
   declarations: [
@@ -25,21 +28,23 @@ import { PageErrorComponent } from './page-error/page-error.component';
     QuotesComponent,
     routingComponents,
     PageErrorComponent,
+    CoffeeListComponent,
+    CoffeeDetailsComponent,
   ],
   imports: [
+    NgxPaginationModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FlexLayoutModule,
     MaterialModule,
-    NgxPaginationModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     EffectsModule.forRoot([CoffeeEffects]),
     BrowserAnimationsModule,
   ],
-  exports: [MaterialModule],
-  providers: [],
+  exports: [MaterialModule, NgxPaginationModule],
+  providers: [CoffeeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

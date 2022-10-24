@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { Observable } from 'rxjs';
 
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CoffeeEffects } from './coffee.effects';
 
 describe('CoffeeEffects', () => {
@@ -10,10 +11,8 @@ describe('CoffeeEffects', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [
-        CoffeeEffects,
-        provideMockActions(() => actions$)
-      ]
+      imports: [HttpClientTestingModule],
+      providers: [CoffeeEffects, provideMockActions(() => actions$)],
     });
 
     effects = TestBed.inject(CoffeeEffects);

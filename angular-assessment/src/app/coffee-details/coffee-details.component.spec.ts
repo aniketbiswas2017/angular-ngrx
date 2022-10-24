@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CoffeeDetailsComponent } from './coffee-details.component';
+import { provideMockStore } from '@ngrx/store/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 describe('CoffeeDetailsComponent', () => {
   let component: CoffeeDetailsComponent;
@@ -8,9 +10,10 @@ describe('CoffeeDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CoffeeDetailsComponent ]
-    })
-    .compileComponents();
+      imports: [RouterTestingModule, NgxPaginationModule],
+      providers: [provideMockStore({})],
+      declarations: [CoffeeDetailsComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CoffeeDetailsComponent);
     component = fixture.componentInstance;
