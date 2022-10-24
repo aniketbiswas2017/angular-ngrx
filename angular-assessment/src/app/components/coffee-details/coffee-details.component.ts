@@ -5,10 +5,10 @@ import {
   OnInit,
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ICoffee } from '../coffee';
+import { ICoffee } from '../../shared/interface/coffee';
 import { Store, select } from '@ngrx/store';
-import * as fromCoffee from '../coffee.selectors';
-import { loadCoffees } from '../coffee.actions';
+import * as fromCoffee from '../../store/selectors/coffee.selectors';
+import { loadCoffees } from '../../store/actions/coffee.actions';
 import { Router } from '@angular/router';
 
 @Component({

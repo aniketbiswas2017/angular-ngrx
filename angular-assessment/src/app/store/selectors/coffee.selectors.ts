@@ -1,5 +1,6 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { State } from './coffee.reducer';
+import { State } from '../reducers/coffee.reducer';
+
 
 const getCoffeeFeatureState = createFeatureSelector<State>('coffeeListState');
 

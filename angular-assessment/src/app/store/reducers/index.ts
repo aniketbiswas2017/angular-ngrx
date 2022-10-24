@@ -1,6 +1,6 @@
 import { ActionReducerMap, MetaReducer } from '@ngrx/store';
-import { environment } from '../../environments/environment';
-import * as fromCoffee from '../coffee.reducer';
+import { environment } from '../../../environments/environment';
+import * as fromCoffee from './coffee.reducer';
 
 export interface State {
   [fromCoffee.coffeeFeatureKey]: fromCoffee.State;

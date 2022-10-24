@@ -6,20 +6,21 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
-import { CoffeeEffects } from './coffee.effects';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material/material.module';
-import { FooterComponent } from './footer/footer.component';
-import { QuotesComponent } from './quotes/quotes.component';
-import { PageErrorComponent } from './page-error/page-error.component';
-import { CoffeeListComponent } from './coffee-list/coffee-list.component';
-import { CoffeeDetailsComponent } from './coffee-details/coffee-details.component';
-import { CoffeeService } from './coffee.service';
+import { MaterialModule } from './shared/material/material.module';
+
+import { CoffeeService } from './services/coffee.service';
+import { CoffeeDetailsComponent } from './components/coffee-details/coffee-details.component';
+import { CoffeeListComponent } from './components/coffee-list/coffee-list.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { PageErrorComponent } from './shared/page-error/page-error.component';
+import { QuotesComponent } from './shared/quotes/quotes.component';
+import { CoffeeEffects } from './store/effects/coffee.effects';
+import { metaReducers, reducers } from './store/reducers';
 
 @NgModule({
   declarations: [

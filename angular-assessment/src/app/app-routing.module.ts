@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CoffeeDetailsComponent } from './coffee-details/coffee-details.component';
-import { CoffeeListComponent } from './coffee-list/coffee-list.component';
-import { PageErrorComponent } from './page-error/page-error.component';
+import { CoffeeDetailsComponent } from './components/coffee-details/coffee-details.component';
+import { CoffeeListComponent } from './components/coffee-list/coffee-list.component';
+import { PageErrorComponent } from './shared/page-error/page-error.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },

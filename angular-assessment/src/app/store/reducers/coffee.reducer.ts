@@ -1,10 +1,10 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import { ICoffee } from './coffee';
+import { ICoffee } from '../../shared/interface/coffee';
 import {
   loadCoffees,
   loadCoffeesFailure,
   loadCoffeesSuccess,
-} from './coffee.actions';
+} from '../actions/coffee.actions';
 
 export const coffeeFeatureKey = 'coffeeListState';
 

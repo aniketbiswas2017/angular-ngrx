@@ -6,8 +6,8 @@ import {
   loadCoffees,
   loadCoffeesFailure,
   loadCoffeesSuccess,
-} from './coffee.actions';
-import { CoffeeService } from './coffee.service';
+} from '../actions/coffee.actions';
+import { CoffeeService } from '../../services/coffee.service';
 
 @Injectable()
 export class CoffeeEffects {
